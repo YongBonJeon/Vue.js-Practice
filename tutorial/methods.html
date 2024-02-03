@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "app">
+        <button v-on:click="logText">click me</button>
+        <input type="text" v-on:keyup.enter="logText"/>
+    </div>
+
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                logText: function(){
+                    console.log('Button clicked');
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

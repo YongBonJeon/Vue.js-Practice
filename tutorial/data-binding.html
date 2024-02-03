@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
+    <p>{{ doubleNum }}</p>
+    <div v-if="loading">
+        Loading...
+    </div>
+    <div v-else>
+        test user has been logged in
+    </div>
+    <input v-model="message" placeholder="edit me">
+    <p>{{ message }}</p>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10,
+                uuid: 'abc1234',
+                name: 'text-blue',
+                loading: false,
+                message: ''
+            },
+            computed: {
+                doubleNum: function () {
+                    return this.num * 2;
+                }
+            }
+        })
+    </script>
+</div>
+</body>
+</html>
